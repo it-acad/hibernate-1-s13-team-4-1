@@ -19,7 +19,7 @@ import java.util.List;
 public class User  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id", insertable = false, updatable = false)
     private Long id;
 
     @Email
@@ -40,10 +40,9 @@ public class User  {
     private Role role;
 
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
-    private List<ToDo> toDos;
+    private List<ToDo> toDo;
 
-    @OneToMany(mappedBy = "collaboratorId", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "users")
     private List<ToDo_Collaborator> collaborators;
-
 
 }

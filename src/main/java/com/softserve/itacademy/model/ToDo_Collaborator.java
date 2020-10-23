@@ -18,12 +18,12 @@ public class ToDo_Collaborator {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Long collaboratorId;
-    @Column
-    private Long toDoId;
-
-    @ManyToMany
-    private List<ToDo> todos;
 
     @ManyToOne
+    @JoinColumn(name = "todo_id")
+    private ToDo toDo;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private User users;
 }

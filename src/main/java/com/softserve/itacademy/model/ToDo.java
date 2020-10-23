@@ -22,7 +22,7 @@ import java.util.Set;
 public class ToDo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id", insertable = false, updatable = false)
     private Long id;
 
     @Column(name = "created_at")
@@ -33,10 +33,10 @@ public class ToDo {
     private String title;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "user_id")
     private User owner;
 
-    @ManyToMany(mappedBy = "todos", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "toDo")
     private List<ToDo_Collaborator> collaborators;
 
 
