@@ -36,6 +36,9 @@ public class ToDo {
     @JoinColumn(name = "user_id")
     private User owner;
 
+    @OneToMany(mappedBy = "state")
+    private List<Task> task;
+
     @OneToMany(mappedBy = "toDo")
     private List<ToDo_Collaborator> collaborators;
 
