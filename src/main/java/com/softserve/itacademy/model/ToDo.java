@@ -1,17 +1,13 @@
 package com.softserve.itacademy.model;
 
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.sql.Date;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Set;
+
 @Data
 @EqualsAndHashCode
 @NoArgsConstructor
@@ -22,25 +18,27 @@ import java.util.Set;
 public class ToDo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", insertable = false, updatable = false)
     private Long id;
-
-    @Column(name = "created_at")
-    private Date createdAt;
 
     @NotBlank(message = "The title cannot be empty")
     @Column(nullable = false, unique = true)
     private String title;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "user_id")
+    @Column(name = "created_at", nullable = false)
+    @NotNull
+    private LocalDateTime createdAt = LocalDateTime.now();
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
     private User owner;
 
-    @OneToMany(mappedBy = "state")
-    private List<Task> task;
+    @OneToMany(mappedBy = "todo", cascade = CascadeType.REMOVE)
+    private List<Task> tasks;
 
-    @OneToMany(mappedBy = "toDo")
-    private List<ToDo_Collaborator> collaborators;
-
+    @ManyToMany
+    @JoinTable(name = "todo_collaborator",
+            joinColumns = @JoinColumn(name = "todo_id"),
+            inverseJoinColumns = @JoinColumn(name = "collaborator_id"))
+    private List<User> collaborators;
 
 }

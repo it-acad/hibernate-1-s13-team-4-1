@@ -4,7 +4,7 @@ package com.softserve.itacademy.model;
 import lombok.*;
 import java.util.List;
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
@@ -22,12 +22,13 @@ public class State {
     @Column()
     private Long id;
 
-    @NotNull
+    @NotBlank
     @Size(min = 1, max = 20, message = "wrong name`s size")
     @Pattern(regexp = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[_@#$%^&+=])")
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
 
-    @OneToMany(mappedBy = "state", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "state")
     private List<Task> task;
 
 }
