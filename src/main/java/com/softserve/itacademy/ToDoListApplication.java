@@ -57,7 +57,6 @@ public class ToDoListApplication implements CommandLineRunner {
         System.out.println(localDate.equals(today));
 
 
-
     }
 }
 

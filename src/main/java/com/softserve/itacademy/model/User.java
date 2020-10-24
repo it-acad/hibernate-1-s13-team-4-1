@@ -5,10 +5,9 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import java.util.List;
+
 @Entity
 @Data
 @EqualsAndHashCode
@@ -16,10 +15,9 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 @Table(name = "users")
-public class User  {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", insertable = false, updatable = false)
     private Long id;
 
     @Email
@@ -37,12 +35,17 @@ public class User  {
     private String password;
 
     @ManyToOne
+    @JoinColumn(name = "role_id")
     private Role role;
 
-    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.REMOVE)
     private List<ToDo> toDo;
 
-    @OneToMany(mappedBy = "users")
-    private List<ToDo_Collaborator> collaborators;
+    @ManyToMany
+    @JoinTable(name = "todo_collaborator",
+            joinColumns = @JoinColumn(name = "collaborator_id"),
+            inverseJoinColumns = @JoinColumn(name = "todo_id"))
+    private List<ToDo> otherTodos;
+
 
 }
