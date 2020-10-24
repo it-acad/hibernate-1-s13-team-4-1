@@ -177,6 +177,3 @@ public class ToDoTests {
         toDo.setTasks(new ArrayList<>());
         assertNotEquals(toDo2.getOwner(), toDo.getOwner());
     }
-
-
-}

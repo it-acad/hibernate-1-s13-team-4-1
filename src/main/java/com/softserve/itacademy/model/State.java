@@ -24,7 +24,7 @@ public class State {
 
     @NotBlank
     @Size(min = 1, max = 20, message = "wrong name`s size")
-    @Pattern(regexp = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[_@#$%^&+=])")
+    @Pattern(regexp = "^[\\\\p{L} ._-]+$")
     @Column(name = "name", nullable = false, unique = true)
     private String name;
 
