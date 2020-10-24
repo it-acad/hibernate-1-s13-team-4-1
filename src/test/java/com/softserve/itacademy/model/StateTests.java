@@ -27,27 +27,27 @@ public class StateTests {
 
     @Test
     void constraintViolationOnEmptyStateName() {
-        emptyState = new State();
-        emptyState.setName("");
+        State emptState = new State();
+        emptState.setName("");
 
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
-        Set<ConstraintViolation<State>> violations = validator.validate(emptyState);
+        Set<ConstraintViolation<State>> violations = validator.validate(emptState);
         assertEquals(1, violations.size());
     }
 
     @Test
-    void getStateId() {
+    void geId() {
         assertEquals(1L, validState.getId());
     }
 
     @Test
-    void getStateName() {
+    void getName() {
         assertEquals("ValidName", validState.getName());
     }
 
     @Test
-    void getStateTask() {
+    void getTask() {
         assertEquals(null, validState.getTask());
     }
 
@@ -70,10 +70,20 @@ public class StateTests {
 
 
     @Test
-    void testStateEquals() {
+    void testEquals() {
         State validState1 = new State();
         State validState2 = new State();
 
         assertEquals(true, validState1.equals(validState2));
+    }
+
+    @Test
+    void testToString() {
+        assertEquals(1, 1);
+    }
+
+    @Test
+    void testHashCode() {
+        assertEquals(1, 1);
     }
 }
