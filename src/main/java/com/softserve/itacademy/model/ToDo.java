@@ -11,7 +11,6 @@ import java.util.List;
 @Data
 @EqualsAndHashCode
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
 @Entity
 @Table(name = "todos")

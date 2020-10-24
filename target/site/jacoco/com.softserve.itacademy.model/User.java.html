@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>User.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ToDoList</a> &gt; <a href="index.source.html" class="el_package">com.softserve.itacademy.model</a> &gt; <span class="el_source">User.java</span></div><h1>User.java</h1><pre class="source lang-java linenums">package com.softserve.itacademy.model;
+
+import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import java.util.List;
+import java.util.Objects;
+
+@Entity
+
+@Table(name = &quot;users&quot;)
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank
+    @Email
+    @Column(name = &quot;email&quot;, unique = true, nullable = false)
+    private String email;
+
+    @Column(name = &quot;first_name&quot;, nullable = false)
+    @Pattern(regexp = &quot;[A-Z][a-z]+\\-[A-Z][a-z]+|[A-Z][a-z]+&quot;)
+    private String firstName;
+
+    @Column(name = &quot;last_name&quot;, nullable = false)
+    @Pattern(regexp = &quot;[A-Z][a-z]+\\-[A-Z][a-z]+|[A-Z][a-z]+&quot;)
+    private String lastName;
+
+    @Column(name = &quot;password&quot;)
+    @Pattern(regexp = &quot;(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[_@#$%^&amp;+=])(?=\\S+$).{8,}$&quot;, message = &quot;password must contain special characters&quot;)
+    private String password;
+
+    @ManyToOne
+    @JoinColumn(name = &quot;role_id&quot;)
+    private Role role;
+
+    @OneToMany(mappedBy = &quot;owner&quot;, cascade = CascadeType.REMOVE)
+    private List&lt;ToDo&gt; toDo;
+
+    @ManyToMany
+    @JoinTable(name = &quot;todo_collaborator&quot;,
+            joinColumns = @JoinColumn(name = &quot;collaborator_id&quot;),
+            inverseJoinColumns = @JoinColumn(name = &quot;todo_id&quot;))
+    private List&lt;ToDo&gt; otherTodos;
+
+<span class="fc" id="L51">    public User() {</span>
+<span class="fc" id="L52">    }</span>
+
+    public Long getId() {
+<span class="fc" id="L55">        return id;</span>
+    }
+
+    public String getEmail() {
+<span class="fc" id="L59">        return email;</span>
+    }
+
+    public void setEmail(String email) {
+<span class="fc" id="L63">        this.email = email;</span>
+<span class="fc" id="L64">    }</span>
+
+    public String getFirstName() {
+<span class="fc" id="L67">        return firstName;</span>
+    }
+
+    public void setFirstName(String firstName) {
+<span class="fc" id="L71">        this.firstName = firstName;</span>
+<span class="fc" id="L72">    }</span>
+
+    public String getLastName() {
+<span class="fc" id="L75">        return lastName;</span>
+    }
+
+    public void setLastName(String lastName) {
+<span class="fc" id="L79">        this.lastName = lastName;</span>
+<span class="fc" id="L80">    }</span>
+
+    public String getPassword() {
+<span class="fc" id="L83">        return password;</span>
+    }
+
+    public void setPassword(String password) {
+<span class="fc" id="L87">        this.password = password;</span>
+<span class="fc" id="L88">    }</span>
+
+    public Role getRole() {
+<span class="fc" id="L91">        return role;</span>
+    }
+
+    public void setRole(Role role) {
+<span class="fc" id="L95">        this.role = role;</span>
+<span class="fc" id="L96">    }</span>
+
+    public List&lt;ToDo&gt; getToDo() {
+<span class="fc" id="L99">        return toDo;</span>
+    }
+
+    public void setToDo(List&lt;ToDo&gt; toDo) {
+<span class="fc" id="L103">        this.toDo = toDo;</span>
+<span class="fc" id="L104">    }</span>
+
+    public List&lt;ToDo&gt; getOtherTodos() {
+<span class="fc" id="L107">        return otherTodos;</span>
+    }
+
+    public void setOtherTodos(List&lt;ToDo&gt; otherTodos) {
+<span class="fc" id="L111">        this.otherTodos = otherTodos;</span>
+<span class="fc" id="L112">    }</span>
+
+    @Override
+    public boolean equals(Object o) {
+<span class="fc bfc" id="L116" title="All 2 branches covered.">        if (this == o) return true;</span>
+<span class="pc bpc" id="L117" title="2 of 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="fc" id="L118">        User user = (User) o;</span>
+<span class="pc bpc" id="L119" title="1 of 2 branches missed.">        return Objects.equals(id, user.id) &amp;&amp;</span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">                Objects.equals(email, user.email) &amp;&amp;</span>
+<span class="pc bpc" id="L121" title="1 of 2 branches missed.">                Objects.equals(firstName, user.firstName) &amp;&amp;</span>
+<span class="pc bpc" id="L122" title="1 of 2 branches missed.">                Objects.equals(lastName, user.lastName) &amp;&amp;</span>
+<span class="pc bpc" id="L123" title="1 of 2 branches missed.">                Objects.equals(password, user.password) &amp;&amp;</span>
+<span class="pc bpc" id="L124" title="1 of 2 branches missed.">                Objects.equals(role, user.role) &amp;&amp;</span>
+<span class="pc bpc" id="L125" title="1 of 2 branches missed.">                Objects.equals(toDo, user.toDo) &amp;&amp;</span>
+<span class="pc bpc" id="L126" title="1 of 2 branches missed.">                Objects.equals(otherTodos, user.otherTodos);</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="fc" id="L131">        return Objects.hash(id, email, firstName, lastName, password, role, toDo, otherTodos);</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L136">        return &quot;User{&quot; +</span>
+                &quot;id=&quot; + id +
+                &quot;, email='&quot; + email + '\'' +
+                &quot;, firstName='&quot; + firstName + '\'' +
+                &quot;, lastName='&quot; + lastName + '\'' +
+                &quot;, password='&quot; + password + '\'' +
+                &quot;, role=&quot; + role +
+                &quot;, toDo=&quot; + toDo +
+                &quot;, otherTodos=&quot; + otherTodos +
+                '}';
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
