@@ -9,10 +9,7 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity
-@Data
-@EqualsAndHashCode
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
 @Table(name = "states")
 public class State {
@@ -31,4 +28,32 @@ public class State {
     @OneToMany(mappedBy = "state")
     private List<Task> task;
 
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public List<Task> getTask() {
+        return task;
+    }
+
+    public void setTask(List<Task> task) {
+        this.task = task;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

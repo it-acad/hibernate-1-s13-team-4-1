@@ -8,10 +8,7 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity
-@Data
-@EqualsAndHashCode
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
 @Table(name = "tasks")
 public class Task {
@@ -38,4 +35,32 @@ public class Task {
     private State state;
 
 
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Priority getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Priority priority) {
+        this.priority = priority;
+    }
 }

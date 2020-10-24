@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ToDo.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ToDoList</a> &gt; <a href="index.source.html" class="el_package">com.softserve.itacademy.model</a> &gt; <span class="el_source">ToDo.java</span></div><h1>ToDo.java</h1><pre class="source lang-java linenums">package com.softserve.itacademy.model;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ToDo.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ToDoList</a> &gt; <a href="index.source.html" class="el_package">com.softserve.itacademy.model</a> &gt; <span class="el_source">ToDo.java</span></div><h1>ToDo.java</h1><pre class="source lang-java linenums">package com.softserve.itacademy.model;
 
 import lombok.*;
 
@@ -88,18 +88,18 @@ public class ToDo {
 <span class="fc" id="L88">        this.collaborators = collaborators;</span>
 <span class="fc" id="L89">    }</span>
 
-    @Override
-    public boolean equals(Object o) {
-<span class="pc bpc" id="L93" title="1 of 2 branches missed.">        if (this == o) return true;</span>
-<span class="pc bpc" id="L94" title="2 of 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
-<span class="fc" id="L95">        ToDo toDo = (ToDo) o;</span>
-<span class="pc bpc" id="L96" title="1 of 2 branches missed.">        return Objects.equals(id, toDo.id) &amp;&amp;</span>
-<span class="nc bnc" id="L97" title="All 2 branches missed.">                Objects.equals(title, toDo.title) &amp;&amp;</span>
-<span class="nc bnc" id="L98" title="All 2 branches missed.">                Objects.equals(createdAt, toDo.createdAt) &amp;&amp;</span>
-<span class="nc bnc" id="L99" title="All 2 branches missed.">                Objects.equals(owner, toDo.owner) &amp;&amp;</span>
-<span class="nc bnc" id="L100" title="All 2 branches missed.">                Objects.equals(tasks, toDo.tasks) &amp;&amp;</span>
-<span class="pc bnc" id="L101" title="All 2 branches missed.">                Objects.equals(collaborators, toDo.collaborators);</span>
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        ToDo toDo = (ToDo) o;
+//        return Objects.equals(id, toDo.id) &amp;&amp;
+//                Objects.equals(title, toDo.title) &amp;&amp;
+//                Objects.equals(createdAt, toDo.createdAt) &amp;&amp;
+//                Objects.equals(owner, toDo.owner) &amp;&amp;
+//                Objects.equals(tasks, toDo.tasks) &amp;&amp;
+//                Objects.equals(collaborators, toDo.collaborators);
+//    }
 
     @Override
     public int hashCode() {

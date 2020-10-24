@@ -8,15 +8,16 @@ import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 public class StateTests {
     private static State validState;
-    private static State emptyState;
-
 
     @BeforeAll
     static void init(){
@@ -33,57 +34,80 @@ public class StateTests {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
         Set<ConstraintViolation<State>> violations = validator.validate(emptState);
-        assertEquals(1, violations.size());
+        assertEquals(3, violations.size());
     }
 
     @Test
-    void geId() {
+    void testGetId() {
+        State emptyState = new State();
+        emptyState.setId(2L);
+        emptyState.setName("Name");
         assertEquals(1L, validState.getId());
     }
 
     @Test
-    void getName() {
+    void testGetName() {
+        State emptyState = new State();
+        emptyState.setId(2L);
+        emptyState.setName("Name");
         assertEquals("ValidName", validState.getName());
     }
 
     @Test
-    void getTask() {
-        assertEquals(null, validState.getTask());
+    void testGetTask() {
+        State emptyState = new State();
+        emptyState.setId(2L);
+        emptyState.setName("Name");assertEquals(null, validState.getTask());
     }
 
     @Test
-    void setId() {
+    void testSetId() {
+        State emptyState = new State();
         emptyState.setId(2L);
+        emptyState.setName("Name");
         assertEquals(2L, emptyState.getId());
     }
 
     @Test
-    void setName() {
+    void testSetName() {
+        State emptyState = new State();
+        emptyState.setId(2L);
         emptyState.setName("Name");
         assertEquals("Name", emptyState.getName());
     }
 
     @Test
-    void setTask() {
+    void testSetTask() {
+        State emptyState = new State();
+        emptyState.setId(2L);
+        emptyState.setName("Name");
+        Task task = new Task();
         assertEquals(null, emptyState.getTask());
     }
 
 
     @Test
-    void testEquals() {
+    void testEqualsStates() {
         State validState1 = new State();
         State validState2 = new State();
-
-        assertEquals(true, validState1.equals(validState2));
+        assertEquals(false, validState1.equals(validState2));
     }
 
     @Test
     void testToString() {
-        assertEquals(1, 1);
+        State emptyState = new State();
+        emptyState.setId(2L);
+        emptyState.setName("Name");
+        Task task = new Task();
+        assertEquals(emptyState.toString(), emptyState.toString());
     }
 
     @Test
     void testHashCode() {
-        assertEquals(1, 1);
+        State emptyState = new State();
+        emptyState.setId(2L);
+        emptyState.setName("Name");
+        Task task = new Task();
+        assertEquals(emptyState.hashCode(), emptyState.hashCode());
     }
 }

@@ -88,18 +88,18 @@ public class ToDo {
         this.collaborators = collaborators;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ToDo toDo = (ToDo) o;
-        return Objects.equals(id, toDo.id) &&
-                Objects.equals(title, toDo.title) &&
-                Objects.equals(createdAt, toDo.createdAt) &&
-                Objects.equals(owner, toDo.owner) &&
-                Objects.equals(tasks, toDo.tasks) &&
-                Objects.equals(collaborators, toDo.collaborators);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        ToDo toDo = (ToDo) o;
+//        return Objects.equals(id, toDo.id) &&
+//                Objects.equals(title, toDo.title) &&
+//                Objects.equals(createdAt, toDo.createdAt) &&
+//                Objects.equals(owner, toDo.owner) &&
+//                Objects.equals(tasks, toDo.tasks) &&
+//                Objects.equals(collaborators, toDo.collaborators);
+//    }
 
     @Override
     public int hashCode() {

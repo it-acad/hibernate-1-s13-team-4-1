@@ -1,20 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.softserve.itacademy.model.StateTests
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 1, Errors: 3, Skipped: 0, Time elapsed: 0.138 s <<< FAILURE! - in com.softserve.itacademy.model.StateTests
-constraintViolationOnEmptyStateName  Time elapsed: 0.001 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <1> but was: <3>
-	at com.softserve.itacademy.model.StateTests.constraintViolationOnEmptyStateName(StateTests.java:36)
-
-setId  Time elapsed: 0 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.softserve.itacademy.model.StateTests.setId(StateTests.java:56)
-
-setName  Time elapsed: 0 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.softserve.itacademy.model.StateTests.setName(StateTests.java:62)
-
-setTask  Time elapsed: 0 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.softserve.itacademy.model.StateTests.setTask(StateTests.java:68)
-
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.47 s - in com.softserve.itacademy.model.StateTests

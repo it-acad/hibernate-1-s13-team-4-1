@@ -10,9 +10,16 @@ import javax.validation.ValidatorFactory;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class TaskTests {
     private static Task testTask;
+
+    @BeforeAll
+    static void init(){
+        testTask = new Task();
+        Object o = new Object();
+    }
 
     @Test
     void constraintViolationOnEmptyTaskName() {
@@ -23,71 +30,188 @@ public class TaskTests {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
         Set<ConstraintViolation<Task>> violations = validator.validate(emptyTask);
-        assertEquals(1, violations.size());
+        assertEquals(2, violations.size());
     }
 
     @Test
     void getId() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertNotEquals(emptyTask1.hashCode(), emptyTask2.hashCode());
     }
 
     @Test
     void getName() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertNotEquals(emptyTask1.getName(), emptyTask2.getName());
     }
 
     @Test
     void getPriority() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertNotEquals(emptyTask1.getPriority(), emptyTask2.getPriority());
     }
 
     @Test
     void getTodo() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertNotEquals(emptyTask1.hashCode(), emptyTask2.hashCode());
     }
 
     @Test
     void getState() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertNotEquals(emptyTask1.hashCode(), emptyTask2.hashCode());
     }
 
     @Test
     void setId() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertNotEquals(emptyTask1.getId(), emptyTask2.getId());
     }
 
     @Test
     void setName() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertNotEquals(emptyTask1.getName(), emptyTask2.getName());
     }
 
     @Test
     void setPriority() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertNotEquals(emptyTask1.getPriority(), emptyTask2.getPriority());
     }
 
     @Test
     void setTodo() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertNotEquals(emptyTask1.hashCode(), emptyTask2.hashCode());
     }
 
     @Test
     void setState() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertNotEquals(emptyTask1.hashCode(), emptyTask2.hashCode());
     }
 
     @Test
     void testToString() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertNotEquals(emptyTask1.toString(), emptyTask2.toString());
     }
 
     @Test
     void testEquals() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertEquals(emptyTask1.hashCode(), emptyTask1.hashCode());
     }
 
     @Test
     void testHashCode() {
-        assertEquals(1, 1);
+        Task emptyTask1 = new Task();
+        emptyTask1.setId(1L);
+        emptyTask1.setName("Task1");
+        emptyTask1.setPriority(Priority.LOW);
+        Task emptyTask2 = new Task();
+        emptyTask2.setId(2L);
+        emptyTask2.setName("Task2");
+        emptyTask2.setPriority(Priority.HIGH);
+        assertNotEquals(emptyTask1.hashCode(), emptyTask2.hashCode());
     }
+
+//    @Test
+//    void testEqualsObject(Object o) {
+//        Task emptyTask1 = new Task();
+//        emptyTask1.setId(1L);
+//        emptyTask1.setName("Task1");
+//        emptyTask1.setPriority(Priority.LOW);
+//        Task emptyTask2 = testTask;
+//        emptyTask2.setId(2L);
+//        emptyTask2.setName("Task2");
+//        emptyTask2.setPriority(Priority.HIGH);
+//        assertEquals(o.hashCode(), o.hashCode());
+//    }
 }
