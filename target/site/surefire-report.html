@@ -72,12 +72,12 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td>38</td>
+<td>65</td>
+<td>3</td>
+<td>2</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>8,386</td></tr></table><br />
+<td>92,308%</td>
+<td>7,629</td></tr></table><br />
 <p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></section><section>
 <h2><a name="Package_List"></a>Package List</h2><a name="Package_List"></a>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><br />
@@ -92,20 +92,20 @@ function toggleDisplay(elementId) {
 <th>Time</th></tr>
 <tr class="b">
 <td><a href="#com.softserve.itacademy.repository">com.softserve.itacademy.repository</a></td>
-<td>3</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1,864</td></tr>
+<td>1,3</td></tr>
 <tr class="a">
 <td><a href="#com.softserve.itacademy.model">com.softserve.itacademy.model</a></td>
-<td>35</td>
+<td>64</td>
+<td>3</td>
+<td>2</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>6,522</td></tr></table><br />
+<td>92,188%</td>
+<td>6,329</td></tr></table><br />
 <p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p><section>
 <h3><a name="com.softserve.itacademy.repository"></a>com.softserve.itacademy.repository</h3><a name="com.softserve.itacademy.repository"></a>
 <table border="1" class="bodyTable">
@@ -126,16 +126,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1,478</td></tr>
-<tr class="a">
-<td><a href="#com.softserve.itacademy.repository.UserRepositoryTest"><figure><img src="images/icon_success_sml.gif" alt="" /></figure></a></td>
-<td><a href="#com.softserve.itacademy.repository.UserRepositoryTest">UserRepositoryTest</a></td>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>0,386</td></tr></table></section><section>
+<td>1,3</td></tr></table></section><section>
 <h3><a name="com.softserve.itacademy.model"></a>com.softserve.itacademy.model</h3><a name="com.softserve.itacademy.model"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
@@ -150,12 +141,30 @@ function toggleDisplay(elementId) {
 <tr class="b">
 <td><a href="#com.softserve.itacademy.model.RoleTests"><figure><img src="images/icon_success_sml.gif" alt="" /></figure></a></td>
 <td><a href="#com.softserve.itacademy.model.RoleTests">RoleTests</a></td>
-<td>1</td>
+<td>6</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>6,13</td></tr>
+<td>5,938</td></tr>
+<tr class="a">
+<td><a href="#com.softserve.itacademy.model.StateTests"><figure><img src="images/icon_error_sml.gif" alt="" /></figure></a></td>
+<td><a href="#com.softserve.itacademy.model.StateTests">StateTests</a></td>
+<td>10</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>60%</td>
+<td>0,138</td></tr>
+<tr class="b">
+<td><a href="#com.softserve.itacademy.model.TaskTests"><figure><img src="images/icon_warning_sml.gif" alt="" /></figure></a></td>
+<td><a href="#com.softserve.itacademy.model.TaskTests">TaskTests</a></td>
+<td>14</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>92,857%</td>
+<td>0,003</td></tr>
 <tr class="a">
 <td><a href="#com.softserve.itacademy.model.ToDoTests"><figure><img src="images/icon_success_sml.gif" alt="" /></figure></a></td>
 <td><a href="#com.softserve.itacademy.model.ToDoTests">ToDoTests</a></td>
@@ -164,7 +173,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0,136</td></tr>
+<td>0,122</td></tr>
 <tr class="b">
 <td><a href="#com.softserve.itacademy.model.UserTests"><figure><img src="images/icon_success_sml.gif" alt="" /></figure></a></td>
 <td><a href="#com.softserve.itacademy.model.UserTests">UserTests</a></td>
@@ -173,7 +182,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0,256</td></tr></table></section><br /></section><section>
+<td>0,128</td></tr></table></section><br /></section><section>
 <h2><a name="Test_Cases"></a>Test Cases</h2><a name="Test_Cases"></a>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><section>
 <h3><a name="RoleTests"></a>RoleTests</h3><a name="com.softserve.itacademy.model.RoleTests"></a>
@@ -181,7 +190,194 @@ function toggleDisplay(elementId) {
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.RoleTests.constraintViolationOnEmptyRoleName"></a>constraintViolationOnEmptyRoleName</td>
-<td>0,144</td></tr></table></section><section>
+<td>0,143</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.RoleTests.checkUsers"></a>checkUsers</td>
+<td>0,005</td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.RoleTests.getName"></a>getName</td>
+<td>0,005</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.RoleTests.checkEquals"></a>checkEquals</td>
+<td>0,003</td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.RoleTests.checkHash"></a>checkHash</td>
+<td>0,004</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.RoleTests.checkToString"></a>checkToString</td>
+<td>0,003</td></tr></table></section><section>
+<h3><a name="StateTests"></a>StateTests</h3><a name="com.softserve.itacademy.model.StateTests"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.StateTests.testToString"></a>testToString</td>
+<td>0</td></tr>
+<tr class="b">
+<td><a href="#com.softserve.itacademy.model.StateTests.constraintViolationOnEmptyStateName"><figure><img src="images/icon_error_sml.gif" alt="" /></figure></a></td>
+<td><a name="TC_com.softserve.itacademy.model.StateTests.constraintViolationOnEmptyStateName"></a><a href="#com.softserve.itacademy.model.StateTests.constraintViolationOnEmptyStateName">constraintViolationOnEmptyStateName</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.softserve.itacademy.model.StateTests.constraintViolationOnEmptyStateName');"><span style="display:inline;" id="com.softserve.itacademy.model.StateTests.constraintViolationOnEmptyStateName-off"> + </span><span style="display:none;" id="com.softserve.itacademy.model.StateTests.constraintViolationOnEmptyStateName-on"> - </span>[ Detail ]</a></div></td>
+<td>0,001</td></tr>
+<tr class="a">
+<td></td>
+<td>expected: &lt;1&gt; but was: &lt;3&gt;</td>
+<td></td></tr>
+<tr class="b">
+<td></td>
+<td>
+<div id="com.softserve.itacademy.model.StateTests.constraintViolationOnEmptyStateName-failure" style="display:none;">
+<div>
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;3&gt;
+	at com.softserve.itacademy.model.StateTests.constraintViolationOnEmptyStateName(StateTests.java:36)
+</pre></div></div></td>
+<td></td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.StateTests.getName"></a>getName</td>
+<td>0</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.StateTests.getTask"></a>getTask</td>
+<td>0</td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.StateTests.geId"></a>geId</td>
+<td>0</td></tr>
+<tr class="b">
+<td><a href="#com.softserve.itacademy.model.StateTests.setId"><figure><img src="images/icon_error_sml.gif" alt="" /></figure></a></td>
+<td><a name="TC_com.softserve.itacademy.model.StateTests.setId"></a><a href="#com.softserve.itacademy.model.StateTests.setId">setId</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.softserve.itacademy.model.StateTests.setId');"><span style="display:inline;" id="com.softserve.itacademy.model.StateTests.setId-off"> + </span><span style="display:none;" id="com.softserve.itacademy.model.StateTests.setId-on"> - </span>[ Detail ]</a></div></td>
+<td>0</td></tr>
+<tr class="a">
+<td></td>
+<td></td>
+<td></td></tr>
+<tr class="b">
+<td></td>
+<td>
+<div id="com.softserve.itacademy.model.StateTests.setId-error" style="display:none;">
+<div>
+<pre>java.lang.NullPointerException
+	at com.softserve.itacademy.model.StateTests.setId(StateTests.java:56)</pre></div></div></td>
+<td></td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.StateTests.testHashCode"></a>testHashCode</td>
+<td>0</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.StateTests.testEquals"></a>testEquals</td>
+<td>0</td></tr>
+<tr class="a">
+<td><a href="#com.softserve.itacademy.model.StateTests.setName"><figure><img src="images/icon_error_sml.gif" alt="" /></figure></a></td>
+<td><a name="TC_com.softserve.itacademy.model.StateTests.setName"></a><a href="#com.softserve.itacademy.model.StateTests.setName">setName</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.softserve.itacademy.model.StateTests.setName');"><span style="display:inline;" id="com.softserve.itacademy.model.StateTests.setName-off"> + </span><span style="display:none;" id="com.softserve.itacademy.model.StateTests.setName-on"> - </span>[ Detail ]</a></div></td>
+<td>0</td></tr>
+<tr class="b">
+<td></td>
+<td></td>
+<td></td></tr>
+<tr class="a">
+<td></td>
+<td>
+<div id="com.softserve.itacademy.model.StateTests.setName-error" style="display:none;">
+<div>
+<pre>java.lang.NullPointerException
+	at com.softserve.itacademy.model.StateTests.setName(StateTests.java:62)</pre></div></div></td>
+<td></td></tr>
+<tr class="b">
+<td><a href="#com.softserve.itacademy.model.StateTests.setTask"><figure><img src="images/icon_error_sml.gif" alt="" /></figure></a></td>
+<td><a name="TC_com.softserve.itacademy.model.StateTests.setTask"></a><a href="#com.softserve.itacademy.model.StateTests.setTask">setTask</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.softserve.itacademy.model.StateTests.setTask');"><span style="display:inline;" id="com.softserve.itacademy.model.StateTests.setTask-off"> + </span><span style="display:none;" id="com.softserve.itacademy.model.StateTests.setTask-on"> - </span>[ Detail ]</a></div></td>
+<td>0</td></tr>
+<tr class="a">
+<td></td>
+<td></td>
+<td></td></tr>
+<tr class="b">
+<td></td>
+<td>
+<div id="com.softserve.itacademy.model.StateTests.setTask-error" style="display:none;">
+<div>
+<pre>java.lang.NullPointerException
+	at com.softserve.itacademy.model.StateTests.setTask(StateTests.java:68)</pre></div></div></td>
+<td></td></tr></table></section><section>
+<h3><a name="TaskTests"></a>TaskTests</h3><a name="com.softserve.itacademy.model.TaskTests"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><a href="#com.softserve.itacademy.model.TaskTests.constraintViolationOnEmptyTaskName"><figure><img src="images/icon_error_sml.gif" alt="" /></figure></a></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.constraintViolationOnEmptyTaskName"></a><a href="#com.softserve.itacademy.model.TaskTests.constraintViolationOnEmptyTaskName">constraintViolationOnEmptyTaskName</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.softserve.itacademy.model.TaskTests.constraintViolationOnEmptyTaskName');"><span style="display:inline;" id="com.softserve.itacademy.model.TaskTests.constraintViolationOnEmptyTaskName-off"> + </span><span style="display:none;" id="com.softserve.itacademy.model.TaskTests.constraintViolationOnEmptyTaskName-on"> - </span>[ Detail ]</a></div></td>
+<td>0</td></tr>
+<tr class="b">
+<td></td>
+<td>expected: &lt;1&gt; but was: &lt;2&gt;</td>
+<td></td></tr>
+<tr class="a">
+<td></td>
+<td>
+<div id="com.softserve.itacademy.model.TaskTests.constraintViolationOnEmptyTaskName-failure" style="display:none;">
+<div>
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;2&gt;
+	at com.softserve.itacademy.model.TaskTests.constraintViolationOnEmptyTaskName(TaskTests.java:26)
+</pre></div></div></td>
+<td></td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.testToString"></a>testToString</td>
+<td>0,001</td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.getName"></a>getName</td>
+<td>0</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.getTodo"></a>getTodo</td>
+<td>0</td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.getId"></a>getId</td>
+<td>0</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.setId"></a>setId</td>
+<td>0</td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.setPriority"></a>setPriority</td>
+<td>0</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.testHashCode"></a>testHashCode</td>
+<td>0</td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.getPriority"></a>getPriority</td>
+<td>0</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.testEquals"></a>testEquals</td>
+<td>0</td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.setState"></a>setState</td>
+<td>0</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.getState"></a>getState</td>
+<td>0</td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.setName"></a>setName</td>
+<td>0</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_com.softserve.itacademy.model.TaskTests.setTodo"></a>setTodo</td>
+<td>0</td></tr></table></section><section>
 <h3><a name="ToDoTests"></a>ToDoTests</h3><a name="com.softserve.itacademy.model.ToDoTests"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
@@ -273,71 +469,114 @@ function toggleDisplay(elementId) {
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.constraintViolationInvalidString_String4"></a>constraintViolationInvalid{String, String}[4]</td>
-<td>0,008</td></tr>
+<td>0</td></tr>
 <tr class="b">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.checkSetTodos"></a>checkSetTodos</td>
-<td>0,002</td></tr>
+<td>0</td></tr>
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.checkGetRole"></a>checkGetRole</td>
-<td>0,004</td></tr>
+<td>0</td></tr>
 <tr class="b">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.checkGetToDo"></a>checkGetToDo</td>
-<td>0,002</td></tr>
+<td>0</td></tr>
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.userWithValidEmail"></a>userWithValidEmail</td>
-<td>0,012</td></tr>
+<td>0</td></tr>
 <tr class="b">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.checkHash"></a>checkHash</td>
-<td>0,002</td></tr>
+<td>0</td></tr>
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.userWithInValidEmail"></a>userWithInValidEmail</td>
-<td>0,008</td></tr>
+<td>0</td></tr>
 <tr class="b">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.checkIsUniq"></a>checkIsUniq</td>
-<td>0,002</td></tr>
+<td>0</td></tr>
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.checkString"></a>checkString</td>
-<td>0,004</td></tr>
+<td>0</td></tr>
 <tr class="b">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.checkGetFirstName"></a>checkGetFirstName</td>
-<td>0,003</td></tr>
+<td>0</td></tr>
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.createValidUser"></a>createValidUser</td>
-<td>0,009</td></tr>
+<td>0</td></tr>
 <tr class="b">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.checkGetPassword"></a>checkGetPassword</td>
-<td>0,003</td></tr>
+<td>0,002</td></tr>
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.model.UserTests.checkIsEqual"></a>checkIsEqual</td>
-<td>0,002</td></tr></table></section><section>
+<td>0,003</td></tr></table></section><section>
 <h3><a name="RoleRepositoryTests"></a>RoleRepositoryTests</h3><a name="com.softserve.itacademy.repository.RoleRepositoryTests"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_com.softserve.itacademy.repository.RoleRepositoryTests.createRole"></a>createRole</td>
-<td>0,159</td></tr></table></section><section>
-<h3><a name="UserRepositoryTest"></a>UserRepositoryTest</h3><a name="com.softserve.itacademy.repository.UserRepositoryTest"></a>
+<td>0,152</td></tr></table></section><br /></section><section>
+<h2><a name="Failure_Details"></a>Failure Details</h2><a name="Failure_Details"></a>
+<p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><br />
 <table border="1" class="bodyTable">
 <tr class="a">
-<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
-<td><a name="TC_com.softserve.itacademy.repository.UserRepositoryTest.updateUser"></a>updateUser</td>
-<td>0,135</td></tr>
+<td><figure><img src="images/icon_error_sml.gif" alt="" /></figure></td>
+<td><a name="com.softserve.itacademy.model.StateTests.constraintViolationOnEmptyStateName"></a>constraintViolationOnEmptyStateName</td></tr>
 <tr class="b">
-<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
-<td><a name="TC_com.softserve.itacademy.repository.UserRepositoryTest.createUser"></a>createUser</td>
-<td>0,134</td></tr></table></section><br /></section>
+<td></td>
+<td>org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;3&gt;</td></tr>
+<tr class="a">
+<td></td>
+<td>
+<div id="constraintViolationOnEmptyStateName-failure">com.softserve.itacademy.model.StateTests:36</div></td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_error_sml.gif" alt="" /></figure></td>
+<td><a name="com.softserve.itacademy.model.StateTests.setId"></a>setId</td></tr>
+<tr class="a">
+<td></td>
+<td>java.lang.NullPointerException</td></tr>
+<tr class="b">
+<td></td>
+<td>
+<div id="setId-error">com.softserve.itacademy.model.StateTests:56</div></td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_error_sml.gif" alt="" /></figure></td>
+<td><a name="com.softserve.itacademy.model.StateTests.setName"></a>setName</td></tr>
+<tr class="b">
+<td></td>
+<td>java.lang.NullPointerException</td></tr>
+<tr class="a">
+<td></td>
+<td>
+<div id="setName-error">com.softserve.itacademy.model.StateTests:62</div></td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_error_sml.gif" alt="" /></figure></td>
+<td><a name="com.softserve.itacademy.model.StateTests.setTask"></a>setTask</td></tr>
+<tr class="a">
+<td></td>
+<td>java.lang.NullPointerException</td></tr>
+<tr class="b">
+<td></td>
+<td>
+<div id="setTask-error">com.softserve.itacademy.model.StateTests:68</div></td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_error_sml.gif" alt="" /></figure></td>
+<td><a name="com.softserve.itacademy.model.TaskTests.constraintViolationOnEmptyTaskName"></a>constraintViolationOnEmptyTaskName</td></tr>
+<tr class="b">
+<td></td>
+<td>org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;2&gt;</td></tr>
+<tr class="a">
+<td></td>
+<td>
+<div id="constraintViolationOnEmptyTaskName-failure">com.softserve.itacademy.model.TaskTests:26</div></td></tr></table><br /></section>
       </div>
     </div>
     <div class="clear">

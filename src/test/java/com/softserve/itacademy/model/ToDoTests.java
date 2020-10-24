@@ -90,6 +90,7 @@ public class ToDoTests {
         toDo.setTasks(new ArrayList<>());
         assertEquals(toDo.getTasks(), toDo.getTasks());
     }
+
     @Test
     void checkToString() {
         User user = new User();
@@ -177,3 +178,4 @@ public class ToDoTests {
         toDo.setTasks(new ArrayList<>());
         assertNotEquals(toDo2.getOwner(), toDo.getOwner());
     }
+}

@@ -9,8 +9,8 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity
-<span class="nc" id="L12">@Data</span>
-<span class="nc bnc" id="L13" title="All 30 branches missed.">@EqualsAndHashCode</span>
+<span class="pc" id="L12">@Data</span>
+<span class="pc bpc" id="L13" title="21 of 30 branches missed.">@EqualsAndHashCode</span>
 <span class="fc" id="L14">@NoArgsConstructor</span>
 <span class="nc" id="L15">@AllArgsConstructor</span>
 <span class="nc" id="L16">@ToString</span>
@@ -20,16 +20,16 @@ public class State {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column()
-<span class="nc" id="L23">    private Long id;</span>
+<span class="fc" id="L23">    private Long id;</span>
 
     @NotBlank
     @Size(min = 1, max = 20, message = &quot;wrong name`s size&quot;)
-    @Pattern(regexp = &quot;(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[_@#$%^&amp;+=])&quot;)
+    @Pattern(regexp = &quot;^[\\\\p{L} ._-]+$&quot;)
     @Column(name = &quot;name&quot;, nullable = false, unique = true)
-<span class="nc" id="L29">    private String name;</span>
+<span class="fc" id="L29">    private String name;</span>
 
     @OneToMany(mappedBy = &quot;state&quot;)
-<span class="nc" id="L32">    private List&lt;Task&gt; task;</span>
+<span class="fc" id="L32">    private List&lt;Task&gt; task;</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
