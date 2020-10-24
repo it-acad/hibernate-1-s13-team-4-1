@@ -1,6 +1,8 @@
 package com.softserve.itacademy.model;
 
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -15,6 +17,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 class RoleTests {
 
+    @BeforeAll
+    static void init(){
+        Role validRole = new Role();
+    }
+
     @Test
     void constraintViolationOnEmptyRoleName() {
         Role emptyRole = new Role();
@@ -26,4 +33,24 @@ class RoleTests {
         assertEquals(1, violations.size());
     }
 
+    @Test
+    void getId() {
+
+    }
+
+    @Test
+    void getName() {
+    }
+
+    @Test
+    void setName() {
+    }
+
+    @Test
+    void getUsers() {
+    }
+
+    @Test
+    void setUsers() {
+    }
 }
