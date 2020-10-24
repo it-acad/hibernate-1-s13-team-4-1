@@ -117,18 +117,6 @@ public class ToDoTests {
     }
 
     @Test
-    void checkCanEqual() {
-        User user = new User();
-        ToDo toDo = new ToDo();
-        toDo.setId(1L);
-        toDo.setTitle("Title");
-        toDo.setOwner(user);
-        toDo.setCollaborators(new ArrayList<>());
-        toDo.setCreatedAt(LocalDateTime.now());
-        toDo.setTasks(new ArrayList<>());
-        assertEquals(true, toDo.canEqual(toDo));
-    }
-    @Test
     void checkEquals() {
         User user = new User();
         ToDo toDo = new ToDo();
@@ -145,7 +133,50 @@ public class ToDoTests {
         toDo.setCollaborators(new ArrayList<>());
         toDo.setCreatedAt(LocalDateTime.now());
         toDo.setTasks(new ArrayList<>());
-        assertTrue(toDo.canEqual(toDo2));
+        assertNotEquals(toDo2, toDo);
     }
+
+
+    @Test
+    void checkTitleEquals() {
+        User user = new User();
+        ToDo toDo = new ToDo();
+        toDo.setId(1L);
+        toDo.setTitle("Title");
+        toDo.setOwner(user);
+        toDo.setCollaborators(new ArrayList<>());
+        toDo.setCreatedAt(LocalDateTime.now());
+        toDo.setTasks(new ArrayList<>());
+        ToDo toDo2 = new ToDo();
+        toDo.setId(1L);
+        toDo.setTitle("Title32");
+        toDo.setOwner(user);
+        toDo.setCollaborators(new ArrayList<>());
+        toDo.setCreatedAt(LocalDateTime.now());
+        toDo.setTasks(new ArrayList<>());
+        assertNotEquals(toDo2.getTitle(), toDo.getTitle());
+    }
+
+    @Test
+    void checkOwnerEquals() {
+        User user = new User();
+        User user2 = new User();
+        ToDo toDo = new ToDo();
+        toDo.setId(1L);
+        toDo.setTitle("Title");
+        toDo.setOwner(user);
+        toDo.setCollaborators(new ArrayList<>());
+        toDo.setCreatedAt(LocalDateTime.now());
+        toDo.setTasks(new ArrayList<>());
+        ToDo toDo2 = new ToDo();
+        toDo.setId(1L);
+        toDo.setTitle("Title32");
+        toDo.setOwner(user);
+        toDo.setCollaborators(new ArrayList<>());
+        toDo.setCreatedAt(LocalDateTime.now());
+        toDo.setTasks(new ArrayList<>());
+        assertNotEquals(toDo2.getOwner(), toDo.getOwner());
+    }
+
 
 }
